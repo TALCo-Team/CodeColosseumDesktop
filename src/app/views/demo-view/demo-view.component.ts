@@ -64,7 +64,7 @@ export class DemoViewComponent implements OnInit {
   async actionCompile() {
     console.log("COMPILE!")
     this.output = "";
-    const command = new Command("sh", ["-c", `${this.filename} 3 1`])
+    const command = new Command("sh", ["-c", `${this.filename}.sh`])
     command.stdout.on("data", (line: any) => {
       this.output += `OUT: ${line}\n`;
       console.log(`OUT: ${line}`);

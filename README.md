@@ -23,9 +23,24 @@ Dependencies:
 - Tauri
 - CodeColosseum 
 
+### Using Install.sh
+
+```bash
+./install.sh
+suurce ~/.bashrc
+```
+
+### Manually
+
+- General
+```bash
+sudo apt update
+sudo apt install git curl
+```
+
 - Rust
 ```bash
-  sudo apt update
+  sudo apt install cargo
   sudo apt install libwebkit2gtk-4.0-dev \
       build-essential \
       curl \
@@ -34,34 +49,40 @@ Dependencies:
       libgtk-3-dev \
       libayatana-appindicator3-dev \
       librsvg2-dev
-  curl --proto '=https' --tlsv1.2 https://sh.rustup.rs -sSf | sh
+  #curl --proto '=https' --tlsv1.2 https://sh.rustup.rs -sSf | sh
 ```
 
 - NodeJS
 ```bash
-  curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
-  source ~/.bashrc
-  nvm list-remote
-  nvm install --lts
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | 
+sh ~/.nvm/nvm.sh install --lts
 ```
   
+- Yarn
+```bash
+  npm install -g yarn
+```
+
 - TypeScript
 ```bash
-  npm install -g typescript
+  yarn global add typescript
 ```
 
 Angular
 ```bash
-  npm install -g @angular/cli
+  yarn global add @angular/cli
 ```
 
 CodeColosseum ( for the server ) 
 ```bash
   sudo apt install cargo
   source install_coco.sh
-  ./cocod
 ```
 
+- Project Dependencies
+```bash
+  yarn install
+```
 
 ## Running the app
 

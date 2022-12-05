@@ -22,6 +22,7 @@ import {ScrollPanelModule} from 'primeng/scrollpanel';
 import {SelectButtonModule} from 'primeng/selectbutton';
 import { DemoViewComponent } from './views/demo-view/demo-view.component';
 import { RouterViewComponent } from './views/router-view/router-view.component';
+import { ApiViewComponent } from './views/api-view/api-view.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { RouterViewComponent } from './views/router-view/router-view.component';
     ConnectViewComponent,
     GameViewComponent,
     DemoViewComponent,
-    RouterViewComponent
+    RouterViewComponent,
+    ApiViewComponent
   ],
   imports: [
     BrowserModule,

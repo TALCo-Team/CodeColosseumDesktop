@@ -1,4 +1,5 @@
-import { Component, OnInit, NgZone } from '@angular/core';
+
+import { Component, OnInit } from '@angular/core';
 import { GAMES } from 'mock-games';
 import { Game } from 'src/app/Game';
 import { TagModule } from 'primeng/tag';
@@ -14,11 +15,7 @@ export class HomeViewComponent implements OnInit {
   loading: boolean = true;
   stateOptions: any[] = [{ icon: 'pi pi-bars', value: 'table' }, { icon: 'pi pi-th-large', value: 'card' }];
   view_mode: string = "table";
-
-  constructor(
-    public zone: NgZone
-  ) {
-  }
+  
 
   ngOnInit(): void {
     setTimeout(() => {
