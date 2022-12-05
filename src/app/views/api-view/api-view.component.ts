@@ -1,15 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, NgZone } from '@angular/core';
 import { ApiService } from 'src/app/services/api.service';
 
 @Component({
-  selector: 'tal-home-view',
-  templateUrl: './home-view.component.html',
-  styleUrls: ['./home-view.component.scss']
+  selector: 'test-view',
+  templateUrl: './api-view.component.html',
+  styleUrls: ['./api-view.component.scss']
 })
-export class HomeViewComponent implements OnInit {
-
-  constructor() { }
-
+export class ApiViewComponent implements OnInit {
+  
   ngOnInit(): void {
     alert("API is available");
     let api = new ApiService();

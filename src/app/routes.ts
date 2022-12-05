@@ -5,6 +5,7 @@ import { DemoViewComponent } from './views/demo-view/demo-view.component';
 import { GameViewComponent } from './views/game-view/game-view.component';
 import { HomeViewComponent } from './views/home-view/home-view.component';
 import { RouterViewComponent } from './views/router-view/router-view.component';
+import { ApiViewComponent } from './views/api-view/api-view.component';
 
 export const routes: Routes = [
     {
@@ -33,6 +34,11 @@ export const routes: Routes = [
         path: 'game',
         canActivate: [AuthGuard],
         component: GameViewComponent
+    },
+    {
+        path: 'api',
+        canActivate: [AuthGuard],
+        component: ApiViewComponent
     },
     { path: "**", redirectTo: "/connect" },
 ];
