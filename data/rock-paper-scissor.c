@@ -42,9 +42,10 @@ int main(int argc, char *argv[])
             case 2: printf("SCISSOR\n"); break;
         }
         fflush(stdout);
-        sleep(1);
+        
         if (interactive == 0) continue;
-
+        sleep(1);
+        
         char response[10];
         scanf(" %s",response);
         int result;
