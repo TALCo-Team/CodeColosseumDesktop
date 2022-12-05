@@ -6,7 +6,7 @@
 /out-tsc
 /bazel-out
 /build
-/src-tauri/release
+/src-tauri/target
 
 # Node
 /node_modules
