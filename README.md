@@ -16,36 +16,73 @@ The project by default is intended to be used with Visual Studio Code.
 The app is a client and in order to be used it requires to connect to instance of CodeColosseum server (cocod).
 
 Dependencies:
+- Rust
 - NodeJS
 - TypeScript
 - Angular
+- Tauri
 - CodeColosseum 
+
+### Using Install.sh
+
+```bash
+./install.sh
+suurce ~/.bashrc
+```
+
+### Manually
+
+- General
+```bash
+sudo apt update
+sudo apt install git curl
+```
+
+- Rust
+```bash
+  sudo apt install cargo
+  sudo apt install libwebkit2gtk-4.0-dev \
+      build-essential \
+      curl \
+      wget \
+      libssl-dev \
+      libgtk-3-dev \
+      libayatana-appindicator3-dev \
+      librsvg2-dev
+  #curl --proto '=https' --tlsv1.2 https://sh.rustup.rs -sSf | sh
+```
 
 - NodeJS
 ```bash
-  curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
-  source ~/.bashrc
-  nvm list-remote
-  nvm install --lts
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | 
+sh ~/.nvm/nvm.sh install --lts
 ```
   
+- Yarn
+```bash
+  npm install -g yarn
+```
+
 - TypeScript
 ```bash
-  npm install -g typescript
+  yarn global add typescript
 ```
 
 Angular
 ```bash
-  npm install -g @angular/cli
+  yarn global add @angular/cli
 ```
 
 CodeColosseum ( for the server ) 
 ```bash
   sudo apt install cargo
   source install_coco.sh
-  ./cocod
 ```
 
+- Project Dependencies
+```bash
+  yarn install
+```
 
 ## Running the app
 
@@ -53,13 +90,13 @@ From the main folder of the app ( same location as package.json )
 
 Install node dependencies (run once):     
 ```bash
-npm install
+yarn
 ```
 
 To run the actuall app during development ( it autoreload when files are changed )     
 Then navigate to `http://localhost:4200/`
 ```bash
-ng serve
+yarn tauri dev
 ```
 
 To create new components (ex: views ) 
@@ -67,9 +104,9 @@ To create new components (ex: views )
 ng generate component component-name
 ```
 
-To build a "production" version, the build artifacts will be stored in the `dist/` directory.
+To build a "production" version, the build artifacts will be stored in the `dist/` directory and the tauri builded version will be located in `src-tauri/target` folder.
 ```bash
-ng build
+yarn tauri build
 ```
 
 __This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.5.__
