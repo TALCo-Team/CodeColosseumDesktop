@@ -1,21 +1,9 @@
 <div class="cc-page">
   <div class="cc-topbar">
-    
+
     <div class="cc-topbar-logo">
       <img src="{{ path }}" alt="{{ alttext }} " width="40px" height="40px" style="margin:10px">
       <h2>Code Colosseum</h2>
-    </div>
-    <div class="cc-topbar-info-list" *ngIf="isConnected">
-      <div class="cc-topbar-info cc-topbar-info-username">
-        <p>Ciao {{ username }}!</p>
-      </div>
-      <div class="cc-topbar-info cc-topbar-info-server">
-        <p>Connesso a {{serverUrl}}</p>
-      </div>
-      <div class="cc-topbar-info cc-topbar-info-logout">
-        <button pButton icon="pi pi-replay" label="Cambia server" (click)="disconnect()">
-        </button>
-      </div>
     </div>
 
     <div class="cc-topbar-info-list">
@@ -23,7 +11,23 @@
         <app-router-view></app-router-view>
       </div>
     </div>
-    
+
+    <div class="cc-topbar-info-list">
+      <div class="cc-topbar-info cc-topbar-info-username" *ngIf="isConnected">
+        <p>Ciao {{ username }}!</p>
+      </div>
+      <div class="cc-topbar-info cc-topbar-info-server" *ngIf="isConnected">
+        <p>Connesso a {{serverUrl}}</p>
+      </div>
+      <div class="cc-topbar-info">
+        <button pButton icon="pi {{changeThemIcon}}" (click)="toggleTheme()"></button>
+      </div>
+      <div class="cc-topbar-info cc-topbar-info-logout" *ngIf="isConnected">
+        <button pButton icon="pi pi-replay" label="Cambia server" (click)="disconnect()">
+        </button>
+      </div>
+    </div>
+
   </div>
   <div class="cc-page">
     <router-outlet></router-outlet>
