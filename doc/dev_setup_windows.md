@@ -2,18 +2,19 @@
 
 Dependencies:    
 - Chocolatey
+- Rust
 - NodeJS
-- Yarn
 - TypeScript
 - Angular
 - Tauri
-- TALight 
+- CodeColosseum 
+
 
 ## Chocolatey
 
 Follow up-to-date instructions at:
 [https://chocolatey.org/](https://chocolatey.org/install#individual)
 
-## NodeJS
+## Rust
 
 ...
