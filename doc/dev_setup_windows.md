@@ -22,25 +22,25 @@ Run these commands on PowerShell with admin privileges to install Yarn, Typescri
 
 - Yarn
 
-    ```bash
+    ```shell
      npm install -g yarn
     ```
 
 - Typescript
 
-    ```bash
+    ```shell
      yarn global add typescript
     ```
 
 - Angular Client
 
-    ```bash
+    ```shell
      yarn global add @angular/cli
     ```
 
 Run this command to enable scripting without certification
 
-```bash
+```shell
     Set-ExecutionPolicy Unrestricted -Scope LocalMachine
 ```
 
@@ -52,7 +52,7 @@ Follow instructions at this [link](https://github.com/romeorizzi/TALight/wiki/EN
 
 ### ***Yarn***
 
-```bash
+```shell
   yarn install
 ```
 
