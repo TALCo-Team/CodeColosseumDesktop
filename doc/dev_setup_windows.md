@@ -3,14 +3,19 @@
 ## Dependencies
 
 - NodeJS
-- Yarn
-- TypeScript
 - Angular
-- TALight
+- Primeng
+- Marked
+- Primeflex
+- Primeicons
+- Yarn
+- CodeColosseum
 
 <br>
 
 ## Installation
+
+***Warning:*** run all the commands in the CodeColosseumDesktop directory for a successful installation.
 
 ### ***NodeJS***
 
@@ -18,37 +23,56 @@ Install NodeJS from this link ([NodeJS download](https://nodejs.org/it/download)
 
 ### ***PowerShell command***
 
-Run these commands on PowerShell with admin privileges to install Yarn, Typescript and Angular Client
-
-- Yarn
-
-    ```shell
-     npm install -g yarn
-    ```
-
-- Typescript
-
-    ```shell
-     yarn global add typescript
-    ```
-
-- Angular Client
-
-    ```shell
-     yarn global add @angular/cli
-    ```
-
-Run this command to enable scripting without certification
+To see if there are any updates for NodeJS run this command
 
 ```shell
-    Set-ExecutionPolicy Unrestricted -Scope LocalMachine
+     npm install -g yarn
 ```
 
-After press "*S*" for apply the change.
+then follow the instructions to update the packages.
 
-### ***Install TALight***
+<br>
 
-Follow instructions at this [link](https://github.com/romeorizzi/TALight/wiki/EN_Installation-on-Windows) for install TALight on Windows.
+Install modules:
+
+- Router
+
+    ```shell
+     ng add @angular/router
+    ```
+
+- Primeng
+
+    ```shell
+     npm install primeng --save --force
+    ```
+
+- Primeflex
+
+    ```shell
+     npm install primeflex --save --force
+    ```
+
+- Primeicons
+
+    ```shell
+     npm install primeicons --save --force
+    ```
+
+- Marked
+
+    ```shell
+     npm install marked --save --force
+     npm i -save-dev @types/marked --force
+    ```
+
+If you have the vulnerability in npm fix them with this command:
+
+```shell
+    npm audit fix
+```
+
+after this retry to install modules.
 
 ### ***Yarn***
 
@@ -56,8 +80,14 @@ Follow instructions at this [link](https://github.com/romeorizzi/TALight/wiki/EN
   yarn install
 ```
 
-Run this command in the TALightDesktop directory for install the program.
+### ***Install CodeColosseum***
+
+Installing Code Colosseum is similar to [TALight](https://github.com/romeorizzi/TALight/wiki/EN_Installation-on-Windows), but remember to edit the commands appropriately for Cod Colosseum. Also, CodeColosseum only has the release version and the coco and cocod commands.
 
 ### ***Last step***
 
-Install **<u>Google Chrome</u>** and **<u>Visual Studio Code</u>** on your computer and start the program with command "*ng server*" in the run and debug section.
+Install **<u>Google Chrome</u>** and **<u>Visual Studio Code</u>** on your computer.
+
+Start the program with command "*ng server*" in the run and debug section and "*cocod*" from the bash installed with git.
+
+***Warning:*** if the program does not work properly, delete the "yarn.lock" file and restart the installation.
