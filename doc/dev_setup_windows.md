@@ -26,7 +26,7 @@ Install NodeJS from this link ([NodeJS download](https://nodejs.org/it/download)
 To see if there are any updates for NodeJS run this command
 
 ```shell
-     npm install -g yarn
+     ng update
 ```
 
 then follow the instructions to update the packages.
@@ -77,6 +77,7 @@ after this retry to install modules.
 ### ***Yarn***
 
 ```shell
+  npm install -g yarn
   yarn install
 ```
 
