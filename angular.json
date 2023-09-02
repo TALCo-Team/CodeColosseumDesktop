@@ -129,5 +129,7 @@
       }
     }
   },
-  "defaultProject": "CodeColosseumDesktop"
+  "cli": {
+    "analytics": false
+  }
 }
